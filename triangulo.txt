@@ -1,0 +1,84 @@
+package questaotriangulo;
+
+import javax.swing.JOptionPane;
+
+/**
+ *
+ * @author aluno
+ */
+public class QuestaoTriangulo {
+
+    public static void main(String[] args) {
+        double valorX1, valorX2, valorY1, valorY2;
+        double pontoA, pontoB;
+        double pontoAx2, pontoBx2;
+        double somaX, somaY;
+        double valorX, valorY;
+        double somaDosPontos;
+        double resultado;
+        String entrada;
+        
+        try {
+            entrada = JOptionPane.showInputDialog("Informe valor do ponto x1 : ");
+            valorX1 = Double.parseDouble(entrada);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "informe apenas valores numereicos");
+            entrada = JOptionPane.showInputDialog("Informe valor do ponto x1 : ");
+            valorX1 = Double.parseDouble(entrada);
+
+        }
+
+        try {
+            entrada = JOptionPane.showInputDialog("Informe valor do ponto x2 : ");
+            valorX2 = Double.parseDouble(entrada);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "informe apenas valores numereicos");
+            entrada = JOptionPane.showInputDialog("Informe valor do ponto x2 : ");
+            valorX2 = Double.parseDouble(entrada);
+
+        }
+
+        try {
+            entrada = JOptionPane.showInputDialog("Informe valor do ponto y1 : ");
+            valorY1 = Double.parseDouble(entrada);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "informe apenas valores numereicos");
+            entrada = JOptionPane.showInputDialog("Informe valor do ponto y1 : ");
+            valorY1 = Double.parseDouble(entrada);
+
+        }
+
+        try {
+            entrada = JOptionPane.showInputDialog("Informe valor do ponto y2 : ");
+            valorY2 = Double.parseDouble(entrada);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "informe apenas valores numereicos");
+            entrada = JOptionPane.showInputDialog("Informe valor do ponto y2 : ");
+            valorY2 = Double.parseDouble(entrada);
+
+        }
+        somaX = valorX1 + valorX2;
+        somaY = valorY1 + valorY2;
+
+        pontoA = valorX1 - valorX2;
+        pontoB = valorY1 - valorY2;
+
+        pontoAx2 = pontoA * pontoA;
+        pontoBx2 = pontoB * pontoB;
+
+        somaDosPontos = pontoAx2 + pontoBx2;
+
+        resultado = Math.sqrt(somaDosPontos);
+
+        JOptionPane.showMessageDialog(null, resultado);
+
+        if (somaX > 0 && somaY > 0) {
+            JOptionPane.showMessageDialog(null, "1º Quadrante!");
+        } else if (somaX < 0 && somaY > 0) {
+            JOptionPane.showMessageDialog(null, "2º Quadrante!");
+        } else if (somaX < 0 && somaY < 0) {
+            JOptionPane.showMessageDialog(null, "3º Quadrante!");
+        } else if (somaX > 0 && somaY < 0) {
+            JOptionPane.showMessageDialog(null, "4º Quadrante!");
+        }
+    }

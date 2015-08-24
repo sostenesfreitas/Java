@@ -1,0 +1,52 @@
+package sostenes;
+
+import javax.swing.JOptionPane;
+
+public class Sostenes {
+
+    public static void main(String[] args) {
+        double ladoA, ladoB, ladoC;
+        boolean valida;
+        String entrada;
+
+        try {
+
+            entrada = JOptionPane.showInputDialog("Informe o valor do lado A : ");
+            ladoA = Double.parseDouble(entrada);
+            while (ladoA == 0) {
+                entrada = JOptionPane.showInputDialog("Informe valores acima de ZERO : ");
+                ladoA = Double.parseDouble(entrada);
+           
+        } 
+        }catch (Exception e) {
+            entrada = JOptionPane.showInputDialog("Informe valores numericos: ");
+            ladoA = Double.parseDouble(entrada);
+
+        }
+        entrada = JOptionPane.showInputDialog("Informe o valor do lado B : ");
+        ladoB = Double.parseDouble(entrada);
+        while (ladoB == 0) {
+            entrada = JOptionPane.showInputDialog("Informe valores acima de ZERO : ");
+            ladoB = Double.parseDouble(entrada);
+        }
+
+        entrada = JOptionPane.showInputDialog("Informe o valor do lado C : ");
+        ladoC = Double.parseDouble(entrada);
+        while (ladoC == 0) {
+            entrada = JOptionPane.showInputDialog("Informe valores acima de ZERO : ");
+            ladoC = Double.parseDouble(entrada);
+        }
+
+        if ((ladoA == ladoB) && (ladoA == ladoC) && (ladoB == ladoC)) {
+            JOptionPane.showMessageDialog(null, "Triangulo Equilatero !");
+        } else if ((ladoA == ladoB) && (ladoA != ladoC) && (ladoB != ladoC)
+                || (ladoA != ladoB) && (ladoA != ladoC) && (ladoB == ladoC)
+                || (ladoA != ladoB) && (ladoA == ladoC) && (ladoB != ladoC)) {
+            JOptionPane.showMessageDialog(null, "Triangulo Isoceles !");
+        } else if ((ladoA != ladoB) && (ladoA != ladoC) && (ladoB != ladoC)) {
+            JOptionPane.showMessageDialog(null, "Triangulo Escaleno !");
+        }
+
+    }
+
+}

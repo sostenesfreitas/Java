@@ -1,0 +1,70 @@
+Todas as questões ferem – se a conceitos sobre Orientação a Objetos. Portanto Para cada tópico : Escreva seu conceito e exemplifique:
+1.Classe
+Uma classe define a estrutura e o comportamento de qualquer objeto da classe, atuando como um padrão para a construção de objetos. 
+da classe, atuando como um padrão para a construção de objetos.
+A definição da classe consiste na definição dos atributos e operações dos objetos desta classe;
+2.Objeto
+Entidades distintas: concretas ou conceituais, sobre as quais armazenamos dados e temos operações para manipulá-los e 
+são importantes dentro do contexto do problema a resolver.
+3.Instãncia
+Identificação de Pertinência
+
+O processo de identificação da pertinência de um objeto a uma determinada classe pode ser melhor caracterizado se ocorrer uma relação do tipo se ocorrer
+ uma relação do tipo É UM ou    ÉUMA
+
+Exemplos: “Josééuma Estudante” “Fusca éum Automóvel
+4.Relações entre Classes
+a.Herança
+É quando uma classe herda as características(atributos e métodos) de outro classe)
+
+Facilita a extensibilidade do sistema (reuso)
+b.Agregação
+Quando unimos um conjunto de objetos para formarmos um novo objeto
+
+c.Associação
+As entidades envolvidas apresentam existências independentes, mas existe uma ligação entre elas
+
+Uma Associação consiste na descrição genérica de uma ou mais ligações entre as classes
+
+Representação é feita através de uma linha unindo as duas 
+
+Representação é feita através de uma linha unindo as duas classes associadas
+5.Atributo
+Um atributo é uma característica de uma classe. Atributos não apresentam comportamento, 
+eles definem a estrutura da classe;
+6.Metodo
+Métodos correspondem aos conceitos comuns de funções, procedimentos ou subrotinas. 
+Estes são apenas conjuntos ordenados de declarações de dados, comandos e expressões. 
+de dados. Em termos simples, são os métodos que realizam todas as tarefas para as quais o programa foi escrito, 
+por exemplo, realizar cálculos, resumir informações de um arquivo, produzir um relatório, 
+criar um gráfico, gerar um filme de animação, etc.
+Exemplo 
+public static void Soma(){
+j=i+i;
+}
+7.Construtor
+É um método que será executado no momento da instanciação do objeto.
+É a forma no qual o objeto deverá ser criado.
+Caso o programador não defina explicitamente um construtor, o java utiliza o construtor default da classe.
+
+Pessoa pessoa = new Pessoa();
+8.Abstração
+Abstração o processo através qual detalhes são ignorados, para nos concentrarmos nas características essenciais
+Concentra-se no que o objeto é e faz e não em como será implementado
+A abstração nos leva a representar os objetos de acordo 
+A abstração nos leva a representar os objetos de acordo com o ponto de vista e interesse de quem os representa.
+Permite representar uma realidade complexa em termos de um modelo simplificado
+Concentra-se nos aspectos essenciais para a resolução de um problema
+Detalhes irrelevantes são suprimido
+9.Encapsulamento
+Encapsular -Incluir ou encerrar em uma cápsula;
+
+Restringir o acesso aos dados apenas através de seus métodos
+10.Padrão Java Beans
+a.Atributo
+Nome de atributo sempre têm a primeira letra minúscula:  nomePessoa, idade, dataNascimento, consultarPotencia.
+b.Metodo
+Nome de métodos sempre têm a primeira letra minúscula:  nomePessoa, idade, dataNascimento, consultarPotencia.
+c.Classe
+Classes devem ser salvas em arquivos de mesmo nome com a extensão .java
+Nome de Classes são sempre escritos com a primeira letra maiúscula. Ex: Pessoa, Carro, CarroEsporte, ContaCorrente.

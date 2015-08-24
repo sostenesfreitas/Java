@@ -1,0 +1,16 @@
+if (jRadioButton1.isSelected()){
+             JOptionPane.showMessageDialog(null,"Resposta certa");
+             new Quest2(this).setVisible(true);
+             this.setVisible(false);
+         }
+           Quest1 formPai;
+
+    public Quest2(Quest1 formPai) {
+        initComponents();
+        this.formPai = formPai;
+    }
+    
+    public void voltarPai() {
+        this.setVisible(false);
+        this.formPai.setVisible(true);
+    }

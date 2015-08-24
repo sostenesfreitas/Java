@@ -1,0 +1,202 @@
+package locadora;
+
+import javax.swing.JOptionPane;
+
+/**
+ *
+ * @author sostenes
+ */
+public class Locadora {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        
+        Cliente cliente = new Cliente();
+        Locacao locacao = new Locacao();
+        Categoria categoria = new Categoria();
+        Filme filme = new Filme();
+        Midia midia = new Midia();
+        LocacaoMidia locacaoMidia = new LocacaoMidia();
+       
+        
+       
+        String lista;
+        lista = "Nome Cliente : " + cliente.nome +"\n"
+              + "Cpf do Cliente : " + cliente.cpf  +"\n"
+              + "Nome do Filme : " + filme.nomeFilme +"\n"
+              + "Categoria do Filme : " + categoria.descricao +"\n"
+              + "Tipo de Midia : " + midia.descricao +"\n"
+              + "Preco da Locacão : " + locacaoMidia.preco +"\n"
+              + "Codigo da Locacão : " + locacao.codigo +"\n"
+              + "Codigo da Midia : " + midia.codigoMidia +"\n"
+              + "Codigo do Filme : " + filme.codigoFilme +"\n"
+              + "Codigo da Categoria : " + categoria.codigoCategoria  ;
+        JOptionPane.showMessageDialog(null, lista);
+     
+    }
+
+}
+----------------------------------------------------------------------------------------------------------
+
+package locadora;
+
+import javax.swing.JOptionPane;
+
+/**
+ *
+ * @author sostenes
+ */
+public class Cliente {
+
+    String cpf;
+    String nome;
+   
+
+ public Cliente(){
+     this.cpf = "00903380599";
+     this.nome = "Sóstenes";
+    }
+}
+
+----------------------------------------------------------------------------------------------------------
+
+package locadora;
+
+import javax.swing.JOptionPane;
+
+/**
+ *
+ * @author sostenes
+ */
+public class Locacao {
+
+    int codigo;
+    String data;
+    Cliente cpf;
+
+    public Locacao() {
+        this.codigo = 000010;
+        this.data = "2015";
+    }
+
+    String n() {
+        Locacao locacao = new Locacao();
+        Cliente cliente = new Cliente();
+        JOptionPane.showMessageDialog(null, "codigo da locacao" + locacao.codigo + "data :" + locacao.data + "cpf " + cliente.cpf);
+        return null;
+    }
+}
+--------------------------------------------------------------------------------------------------------------------------
+
+package locadora;
+
+import javax.swing.JOptionPane;
+
+/**
+ *
+ * @author sostenes
+ */
+public class Categoria {
+
+    int codigoCategoria;
+    String descricao;
+
+    public Categoria() {
+        this.codigoCategoria = 8901;
+        this.descricao = "acao";
+    }
+
+    String f() {
+        Categoria categoria = new Categoria();
+        JOptionPane.showMessageDialog(null, "codigo categoria " + categoria.codigoCategoria + "descircao : " + categoria.descricao);
+        return null;
+    }
+}
+---------------------------------------------------------------------------------------------------------------------------------
+package locadora;
+
+import javax.swing.JOptionPane;
+
+/**
+ *
+ * @author sostenes
+ */
+public class Filme {
+
+    int codigoFilme;
+    String nomeFilme;
+    Categoria codigoCategoria;
+
+    public Filme() {
+        this.codigoFilme = 8787087;
+        this.nomeFilme = "KINGS MAN";
+    }
+
+    String o() {
+        Filme filme = new Filme();
+        Categoria categoria = new Categoria();
+        JOptionPane.showMessageDialog(null, "Codigo do filme " + filme.codigoFilme + "nome filme" + filme.nomeFilme + "codigo categoria" + categoria.codigoCategoria);
+        return null;
+    }
+
+}
+--------------------------------------------------------------------------------------------------------------------------
+
+package locadora;
+
+import javax.swing.JOptionPane;
+
+/**
+ *
+ * @author sostenes
+ */
+public class Midia {
+
+    int codigoMidia;
+    String descricao;
+    Filme codigoFilme;
+
+    public Midia() {
+        this.descricao = "DVD";
+        this.codigoMidia = 1760;
+    }
+
+    String r() {
+        Midia midia = new Midia();
+        Filme filme = new Filme();
+        JOptionPane.showMessageDialog(null, " codigo midia ;" + midia.codigoMidia + "descricao : " + midia.descricao + "codigo filme " + filme.codigoFilme);
+        return null;
+    }
+}
+--------------------------------------------------------------------------------------------------------------------------
+
+package locadora;
+
+import javax.swing.JOptionPane;
+
+/**
+ *
+ * @author sostenes
+ */
+public class LocacaoMidia {
+
+    Locacao codigo;
+    Midia codiigoMidia;
+    double preco;
+
+    public LocacaoMidia() {
+        this.preco = 20.00;
+    }
+
+    String m() {
+        Midia midia = new Midia();
+        Locacao locacao = new Locacao();
+        LocacaoMidia locacaoMidia = new LocacaoMidia();
+        JOptionPane.showMessageDialog(null, "locacao" + locacao.codigo + "midia" + midia.codigoMidia + "preco" + locacaoMidia.preco);
+
+        return null;
+    }
+}
+    

@@ -1,0 +1,42 @@
+CLASSE
+
+public class Triangulo {
+
+    double ladoA;
+    double ladoB;
+    double ladoC;
+
+    String tipoDoTriangulo() {
+        
+        if ((ladoA == ladoB) && (ladoA == ladoC) && (ladoB == ladoC)) {
+            return("Triangulo Equilatero");
+        } else if ((ladoA == ladoB) && (ladoA != ladoC) && (ladoB != ladoC)
+                || (ladoA != ladoB) && (ladoA != ladoC) && (ladoB == ladoC)
+                || (ladoA != ladoB) && (ladoA == ladoC) && (ladoB != ladoC)) {
+           return("Triangulo Isoceles");
+        } else if ((ladoA != ladoB) && (ladoA != ladoC) && (ladoB != ladoC)) {
+            
+               return("Triangulo Escaleno");
+        }
+ 
+        
+    }
+
+
+
+
+
+
+
+
+JFRAME
+
+ArrayList <Triangulo> colecaoTriangulo = new ArrayList <>();
+    
+Triangulo l = new Triangulo();
+        l.ladoA = Double.parseDouble (jTextFieldLado1.getText());
+        l.ladoB = Double.parseDouble (jTextFieldLado2.getText());
+        l.ladoC = Double.parseDouble (jTextFieldLado3.getText());
+        colecaoTriangulo.add(l);
+
+

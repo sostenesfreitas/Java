@@ -1,0 +1,58 @@
+import javax.swing.JOptionPane;
+
+/**
+ *
+ * @author aluno
+ */
+public class Exercicio {
+
+
+    public static void main(String[] args) {
+        String nome, cpf, rg, entrada, situacao;
+        float nota1, nota2;
+
+        nome = JOptionPane.showInputDialog(null, "informe nome :", "Situação do aluno", JOptionPane.QUESTION_MESSAGE);
+        if (nome == null || nome.length() < 20 || nome.length() > 80 || nome.trim().equals("") == true) {
+            JOptionPane.showMessageDialog(null, "campo obrigatorio minimo vinte e maximo oitenta caracteres ");
+            nome = JOptionPane.showInputDialog("informe nome :","sostenes freitas de andrade");
+            
+        }
+        cpf = JOptionPane.showInputDialog("informe cpf :","00800980498");
+        if (String.valueOf(cpf).length() != 11) {
+            JOptionPane.showMessageDialog(null, "campo obrigatorio apenas onze caracteres");
+            cpf = JOptionPane.showInputDialog("informe cpf :");
+
+        }
+
+        rg = JOptionPane.showInputDialog("informe rg :","20142012");
+        if (rg.length() < 7 || rg.length() > 20) {
+            JOptionPane.showMessageDialog(null, "campo obrigatorio minimo sete e maximo vinte caracteres ");
+            rg = JOptionPane.showInputDialog("informe rg :");
+        }
+        entrada = JOptionPane.showInputDialog("informe primeira nota :");
+        nota1 = Float.parseFloat(entrada);
+        if (nota1 < 0 || nota1 > 10) {
+            JOptionPane.showMessageDialog(null, "valores entre 0 e 10 ");
+            entrada = JOptionPane.showInputDialog("informe primeira nota :");
+            nota1 = Float.parseFloat(entrada);
+
+        }
+        entrada = JOptionPane.showInputDialog("informe segunda nota :");
+        nota2 = Float.parseFloat(entrada);
+        if (nota2 < 0 || nota2 > 10) {
+            JOptionPane.showMessageDialog(null, "valores entre 0 e 10 ");
+            entrada = JOptionPane.showInputDialog("informe segunda nota :");
+            nota2 = Float.parseFloat(entrada);
+
+        }
+        if ((nota1 + nota2)/2 > 7) {
+            situacao = "aprovado";
+
+        } else {
+            situacao = "reprovado";
+        }
+        JOptionPane.showMessageDialog(null, "Aluno inserido com sucesso!", "Concluido",JOptionPane.PLAIN_MESSAGE);
+        JOptionPane.showMessageDialog(null, "nome do aluno : " + nome + "\r\n" + "cpf do aluno : " + cpf + "\r\n" + "rg do aluno : " + rg + "\r\n" + "Situação do aluno : " + situacao);
+    }
+
+}
